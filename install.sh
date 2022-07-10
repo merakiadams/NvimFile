@@ -176,8 +176,23 @@ echo :: 输入1继续，其他输入则放弃
 read if_edit_sources
 
 if [ $if_edit_sources = "1" ]; then
-	# check_requirements {{{
-	check_requirements () {
+
+  #####
+  echo "   "
+  echo "   "
+  echo_with_color ${Yellow} "        _____ _     _  __     ___             ___           _        _ _ "
+  echo_with_color ${Yellow} "       |  ___(_)___| |_\ \   / (_)_ __ ___   |_ _|_ __  ___| |_ __ _| | |"
+  echo_with_color ${Yellow} "       | |_  | / __| ’_ \ \ / /| | ’_ | _ \   | || “_ \/ __| __/ _’ | | |"
+  echo_with_color ${Yellow} "       |  _| | \__ \ | | \ V / | | | | | | |  | || | | \__ \ || (_| | | |"
+  echo_with_color ${Yellow} "       |_|   |_|___/_| |_|\_/  |_|_| |_| |_| |___|_| |_|___/\__\__,_|_|_|"
+  echo "   "
+  echo "   "
+  echo_with_color ${Yellow} "							        Version : 1.0.2 Author : Zane Adams          "
+  echo "  "
+  echo "  "
+
+  # check_requirements {{{
+  check_requirements () {
     info "正在检测 FishVim 依赖环境..."
     if hash "git" &>/dev/null; then
       git_version=$(git --version)
@@ -253,23 +268,6 @@ if [ $if_edit_sources = "1" ]; then
   }
 
   # }}}
-
-
-  #####
-  if [ "$if_edit_sources" = "1" ];then
-
-  echo "   "
-  echo "   "
-  echo_with_color ${Yellow} "        _____ _     _  __     ___             ___           _        _ _ "
-  echo_with_color ${Yellow} "       |  ___(_)___| |_\ \   / (_)_ __ ___   |_ _|_ __  ___| |_ __ _| | |"
-  echo_with_color ${Yellow} "       | |_  | / __| ’_ \ \ / /| | ’_ | _ \   | || “_ \/ __| __/ _’ | | |"
-  echo_with_color ${Yellow} "       |  _| | \__ \ | | \ V / | | | | | | |  | || | | \__ \ || (_| | | |"
-  echo_with_color ${Yellow} "       |_|   |_|___/_| |_|\_/  |_|_| |_| |_| |___|_| |_|___/\__\__,_|_|_|"
-  echo "   "
-  echo "   "
-  echo_with_color ${Yellow} "							        Version : 1.0.2 Author : Zane Adams          "
-  echo "  "
-  echo "  "
 
   read number
   echo "\033[36m :: \033[0m 4 可选选项。"
