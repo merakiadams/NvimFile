@@ -160,6 +160,8 @@ function get_linux_distro()
     fi
 }
 
+mv vimrc .vimrc
+
 # 获取日期
 function get_datetime()
 {
