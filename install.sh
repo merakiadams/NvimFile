@@ -282,24 +282,24 @@ if [ $if_edit_sources = "1" ]; then
 
   echo "  "
   echo " 正在备份你的配置文件 "
-  mv -r $HOME/.config/nvim ./vim_back
-  mv -r $HOME/.vim ./vim_back
-  mv $HOME/.vimrc ./vim_back
+  mv -r "$HOME/.config/nvim ./vim_back"
+  mv -r "$HOME/.vim" ./Vim_Back
+  mv "$HOME/.vimrc" ./Vim_Back
 
   echo "  "
   echo ":: "
   if [ $number = "1" ]; then
     git clone https://github.com/Zane-two/fishvim ../fishvim
-    mv ./fishvim/.vimrc $HOME/
-    mv ./fishvim/.vim $HOME/
-    mv ./fishvim/nvim $HOME/.config
+    mv ./fishvim/.vimrc "$HOME/"
+    mv ./fishvim/.vim "$HOME/"
+    mv ./fishvim/nvim "$HOME/.config"
   elif [ $number = "2" ]; then
-    mv ./.vimrc $HOME/
-    mv ./nvim $HOME/.config
+    mv ./.vimrc "$HOME/"
+    mv ./nvim "$HOME/.config"
   elif [ $number = "3" ]; then
-    mv ./.vimrc $HOME/
+    mv ./.vimrc "$HOME/"
   elif [ $number = "4" ]; then
-    mv ./nvim $HOME/.config/
+    mv ./nvim "$HOME/.config/"
   else 
     echo ":: 对不起，你的操作为无效操作。"
 
