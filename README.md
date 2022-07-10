@@ -1,2 +1,3 @@
 # fishvim
-An automatic configuration program for vim/nvim.
+🚀An automatic configuration program for vim/nvim.
+
