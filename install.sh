@@ -287,7 +287,8 @@ if [ $if_edit_sources = "1" ]; then
   echo "  "
   echo ":: "
   if [ $number = "1" ]; then
-    git clone https://github.com/Zane-two/fishvim ../fishvim
+    mkdir fishvim
+    git clone https://github.com/Zane-two/FishVim ../fishvim
     mv ./fishvim/.vimrc "$HOME/"
     mv ./fishvim/.vim "$HOME/"
     mv ./fishvim/nvim "$HOME/.config"
